@@ -64,13 +64,6 @@ Ideal for learning full ML workflow—from preprocessing to model evaluation and
 
 ### Installation
 
-```bash
-git clone https://github.com/shiramwangi/sentiment-analysis-classifier.git
-cd sentiment-analysis-classifier
-python3 -m venv venv
-source venv/bin/activate   # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
 ## Step‑by‑Step Build Process 🧩
 
 Follow this order **on your coding day**—about **5–6 hours** of work:
@@ -181,3 +174,11 @@ metrics.txt
 app/ (optional UI)
 notebooks/ (optional analysis)
 requirements.txt
+
+```bash
+git clone https://github.com/shiramwangi/sentiment-analysis-classifier.git
+cd sentiment-analysis-classifier
+python3 -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+
