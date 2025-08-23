@@ -1,63 +1,64 @@
 # Sentiment Analysis Classifier
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/7b970437-71cf-462c-968a-0dc429b13a58" />
 
-A modern, reproducible machine learning project for text sentiment analysis using Python, scikit-learn, and Flask.
 
-## Project Overview
+**A Python-based sentiment analysis pipeline using TF-IDF and Multinomial Naive Bayes to classify movie reviews as positive or negative.**
 
-This repository provides a full workflow for building, training, evaluating, and deploying a sentiment analysis classifier. It covers text preprocessing, model training (TF-IDF + Naive Bayes), prediction, and a simple web UI for live testing.
+---
+
+##  Table of Contents
+1. [Overview](#overview)  
+2. [Project Structure](#project-structure)  
+3. [Quick Start](#quick-start)  
+4. [Usage Guide](#usage-guide)  
+5. [Model Details](#model-details)  
+6. [Results & Metrics](#results--metrics)  
+7. [Testing & CI](#testing--ci)  
+8. [Future Enhancements](#future-enhancements)  
+9. [License](#license)
+
+---
+
+## Overview
+
+This project demonstrates a complete sentiment analysis workflow—from preprocessing raw movie reviews to deploying a working classifier. It is designed to be beginner-friendly, reproducible, and thoughtfully structured. Ideal for showcasing your understanding of machine learning pipelines.
+
+---
+
+## Project Structure
+
+├── data/
+│ ├── raw/ # Unprocessed data source
+│ └── processed/ # Cleaned & preprocessed data
+├── src/ # Core pipeline code
+│ ├── preprocess.py
+│ ├── train_model.py
+│ └── predict.py
+├── app/ # Flask-based demo application
+├── models/ # Serialized model and vectorizer (auto-generated)
+├── results/ # Saved evaluation metrics and reports
+├── tests/ # Unit & integration tests
+├── docs/ # Supplemental documentation
+├── notebooks/ # Exploratory or sample notebooks
+├── README.md # This file
+├── requirements.txt # Project dependencies
+└── LICENSE # Project licensing (MIT)
+
+
+---
 
 ## Quick Start
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/shiramwangi/sentiment-analysis-classifier.git
-   cd sentiment-analysis-classifier
-   ```
+Get up and running in under 5 minutes:
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+```bash
+git clone https://github.com/shiramwangi/sentiment-analysis-classifier
+cd sentiment-analysis-classifier
+python -m venv venv
+# Activate the virtual environment:
+# Windows: venv\Scripts\activate
+# macOS/Linux: source venv/bin/activate
+pip install -r requirements.txt
 
-3. **Preprocess your data**
-   ```bash
-   python src/preprocess.py
-   ```
-
-4. **Train the model**
-   ```bash
-   python src/train_model.py
-   ```
-
-5. **Make predictions**
-   ```bash
-   python src/predict.py "Your text here"
-   ```
-
-6. **Run the web app**
-   ```bash
-   python app/app.py
-   ```
-
-## Folder Structure
-
-```
-data/
-  raw/        # Store original/raw datasets
-  processed/  # Store cleaned/processed data
-models/       # Saved models & vectorizers
-notebooks/    # Jupyter notebooks (EDA, prototyping)
-results/      # Metrics, plots, sample outputs
-src/          # Source code (preprocessing, training, etc)
-tests/        # Unit/integration tests
-docs/         # Documentation, data dictionary, diagrams
-app/          # Flask web app
-```
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
-
-## Author
-
-Mwangi Chiira (2025)
+# Optionally: run tests
+pytest
